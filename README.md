@@ -35,3 +35,17 @@ LASHelpCenter.openConversation(context);
 LASHelpCenter.allowAlertNewMessage(false)
 ```
 
+### 获取未读消息数目
+
+你可以在程序的任何位置调用以下接口来获取未读消息数目，没有新消息时会返回 `0`，网络异常为返回 `-1`。
+
+```java
+LASHelpCenter.getMessageCountInBackground(new CountCallback() {
+    @Override
+    public void done(int count, LASException e) {
+		if (count > 0){
+        	// do something
+        }
+    }
+});
+```
