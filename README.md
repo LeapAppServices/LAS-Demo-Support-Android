@@ -1,43 +1,44 @@
 # LAS-Demo-Support-Android
 
-## 简介
+## Overview
 
-Support 是 LAS SDK 的一个 Sample，该项目依赖于 LAS 的基础模块和 Helpcenter 模块。通过该应用你可以学习和了解获取用户反馈的相关操作。
+Support is a sample of LAS SDK. It relies on the basic module of LAS and the HelpCenter Module. You can learn related operations of getting feedback with this app.
 
-## 效果
+
+## Effect
 
 ![capture](capture/support.gif)
 
-## 使用
+## How to Use
 
-1. 打开 Android Studio 或 IDEA ，点击菜单项 `File -> Open ` 选择 `setting.gradle` 文件导入工程
-2. 打开 `App.java` 文件，使用你自己的 `APP Id` 和 `API KEY` 替换该文件中已定义的同名常量。
+1. Open Android Studio or IDEA, click `File -> Open `, select and import `setting.gradle`. 
+2. Open `App.java` and replace the defined constants with your own `APP Id` and `API KEY`. 
 
-## 配置
+## Configuration
 
-### 显示 Faq 画面
+### Show FAQ Page
 
 ```java
 LASHelpCenter.openFaqs(context);
 ```
 
-### 显示 Issue 画面
+### Show Issue Page
 
 ```language
 LASHelpCenter.openConversation(context);
 ```
 
-### 消息设置
+### Push Settings
 
-默认应用进入前台时，一旦发现服务器上有新消息，应用会自动弹出对话框提示用户查看新消息。如果你希望关闭这个功能，可以在 `App.Java` 中添加如下代码：
+Once the app runs in foreground and there is new message in server, the app will show a popup to remind users. You can close this function by adding following code in `App.Java`：
 
 ```java
 LASHelpCenter.allowAlertNewMessage(false)
 ```
 
-### 获取未读消息数目
+### Get Unread Messages Amount
 
-你可以在程序的任何位置调用以下接口来获取未读消息数目，没有新消息时会返回 `0`，网络异常为返回 `-1`。
+You can invoke following interface anywhere in the app to get unread messages amount. It will return `0` if there's none, `-1`  if there's network error.
 
 ```java
 LASHelpCenter.getMessageCountInBackground(new CountCallback() {
