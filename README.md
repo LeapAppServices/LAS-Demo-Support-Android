@@ -1,8 +1,8 @@
-# LAS-Demo-Support-Android
+# LeapCloud-Demo-Support-Android
 
 ## Overview
 
-Support is a sample of LAS SDK. It relies on the basic module of LAS and the HelpCenter Module. You can learn related operations of getting feedback with this app.
+Support is a sample of LeapCloud SDK. It relies on the basic module of LeapCloud and the HelpCenter Module. You can learn related operations of getting feedback with this app.
 
 
 ## Effect
@@ -11,21 +11,21 @@ Support is a sample of LAS SDK. It relies on the basic module of LAS and the Hel
 
 ## How to Use
 
-1. Open Android Studio or IDEA, click `File -> Open `, select and import `setting.gradle`. 
-2. Open `App.java` and replace the defined constants with your own `APP Id` and `API KEY`. 
+1. Open Android Studio or IDEA, click `File -> Open `, select and import `setting.gradle`.
+2. Open `App.java` and replace the defined constants with your own `APP Id` and `API KEY`.
 
 ## Configuration
 
 ### Show FAQ Page
 
 ```java
-LASHelpCenter.openFaqs(context);
+LCHelpCenter.openFaqs(context);
 ```
 
 ### Show Issue Page
 
 ```language
-LASHelpCenter.openConversation(context);
+LCHelpCenter.openConversation(context);
 ```
 
 ### Push Settings
@@ -33,7 +33,7 @@ LASHelpCenter.openConversation(context);
 Once the app runs in foreground and there is new message in server, the app will show a popup to remind users. You can close this function by adding following code in `App.Java`：
 
 ```java
-LASHelpCenter.allowAlertNewMessage(false)
+LCHelpCenter.allowAlertNewMessage(false)
 ```
 
 ### Get Unread Messages Amount
@@ -41,9 +41,9 @@ LASHelpCenter.allowAlertNewMessage(false)
 You can invoke following interface anywhere in the app to get unread messages amount. It will return `0` if there's none, `-1`  if there's network error.
 
 ```java
-LASHelpCenter.getMessageCountInBackground(new CountCallback() {
+LCHelpCenter.getMessageCountInBackground(new CountCallback() {
     @Override
-    public void done(int count, LASException e) {
+    public void done(int count, LCException e) {
 		if (count > 0){
         	// do something
         }
