@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import as.leap.LASHelpCenter;
+import as.leap.LCHelpCenter;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(android.R.id.button1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                LASHelpCenter.openFaqs(MainActivity.this);
+                LCHelpCenter.openFaqs(MainActivity.this);
             }
         });
 

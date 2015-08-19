@@ -2,8 +2,9 @@ package as.leap.demo.support;
 
 import android.app.Application;
 
-import as.leap.LASConfig;
-import as.leap.LASHelpCenter;
+import as.leap.LCHelpCenter;
+import as.leap.LeapCloud;
+
 
 public class App extends Application {
 
@@ -16,12 +17,12 @@ public class App extends Application {
 
         if (APP_ID.startsWith("Replace") || API_KEY.startsWith("Replace")) {
             throw new IllegalArgumentException("Please replace with your app id and api key first before" +
-                    "using LAS SDK.");
+                    "using LeapCloud SDK.");
         }
 
-        LASConfig.setLogLevel(LASConfig.LOG_LEVEL_VERBOSE);
-        LASConfig.initialize(this, APP_ID, API_KEY);
+        LeapCloud.setLogLevel(LeapCloud.LOG_LEVEL_VERBOSE);
+        LeapCloud.initialize(this, APP_ID, API_KEY);
 
-        LASHelpCenter.allowAlertNewMessage(false);
+        LCHelpCenter.allowAlertNewMessage(false);
     }
 }
