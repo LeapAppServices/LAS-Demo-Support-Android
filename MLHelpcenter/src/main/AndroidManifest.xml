@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.maxleap.helpcenter">
+
+    <application>
+
+        <!-- LeapCloud help center activities start-->
+        <activity
+            android:name="com.maxleap.MLFaqListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/ml_hc_faq"
+            android:theme="@style/MLHelpCenter.Theme">
+        </activity>
+        <activity
+            android:name="com.maxleap.MLQuestionListActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/ml_hc_allQuestions"
+            android:theme="@style/MLHelpCenter.Theme">
+        </activity>
+        <activity
+            android:name="com.maxleap.MLQuestionDetailActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/ml_hc_question"
+            android:theme="@style/MLHelpCenter.Theme">
+        </activity>
+        <activity
+            android:name="com.maxleap.MLQuestionQueryResultActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/ml_hc_allQuestions"
+            android:theme="@style/MLHelpCenter.Theme">
+        </activity>
+        <activity
+            android:name="com.maxleap.MLConversationActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/ml_hc_conversation"
+            android:theme="@style/MLHelpCenter.Theme"
+            android:windowSoftInputMode="adjustUnspecified">
+        </activity>
+        <activity
+            android:name="com.maxleap.MLAlbumActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/ml_hc_album"
+            android:theme="@style/MLHelpCenter.Theme">
+        </activity>
+        <activity
+            android:name="com.maxleap.MLDrawingActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/ml_hc_drawing"
+            android:screenOrientation="portrait"
+            android:theme="@style/MLHelpCenter.Theme">
+        </activity>
+        <activity
+            android:name="com.maxleap.MLFaqDialogActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/ml_hc_question"
+            android:theme="@style/MLHelpCenter.Theme">
+        </activity>
+        <activity
+            android:name="com.maxleap.MLImageDialogActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/MLHelpCenter.Theme">
+        </activity>
+        <!-- LeapCloud help center activities end-->
+
+    </application>
+
+</manifest>
