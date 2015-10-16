@@ -1,8 +1,8 @@
-# LeapCloud-Demo-Support-Android
+# MaxLeap-Demo-Support-Android
 
 ## 简介
 
-Support 是 LeapCloud SDK 的一个 Sample，该项目依赖于 LeapCloud 的基础模块和 Helpcenter 模块。通过该应用你可以学习和了解获取用户反馈的相关操作。
+Support 是 MaxLeap SDK 的一个 Sample，该项目依赖于 MaxLeap 的基础模块和 Helpcenter 模块。通过该应用你可以学习和了解获取用户反馈的相关操作。
 
 ## 效果
 
@@ -18,13 +18,13 @@ Support 是 LeapCloud SDK 的一个 Sample，该项目依赖于 LeapCloud 的基
 ### 显示 Faq 画面
 
 ```java
-LCHelpCenter.openFaqs(context);
+MLHelpCenter.openFaqs(context);
 ```
 
 ### 显示 Issue 画面
 
 ```language
-LCHelpCenter.openConversation(context);
+MLHelpCenter.openConversation(context);
 ```
 
 ### 消息设置
@@ -32,7 +32,7 @@ LCHelpCenter.openConversation(context);
 默认应用进入前台时，一旦发现服务器上有新消息，应用会自动弹出对话框提示用户查看新消息。如果你希望关闭这个功能，可以在 `App.Java` 中添加如下代码：
 
 ```java
-LCHelpCenter.allowAlertNewMessage(false)
+MLHelpCenter.allowAlertNewMessage(false)
 ```
 
 ### 获取未读消息数目
@@ -40,9 +40,9 @@ LCHelpCenter.allowAlertNewMessage(false)
 你可以在程序的任何位置调用以下接口来获取未读消息数目，没有新消息时会返回 `0`，网络异常为返回 `-1`。
 
 ```java
-LCHelpCenter.getMessageCountInBackground(new CountCallback() {
+MLHelpCenter.getMessageCountInBackground(new CountCallback() {
     @Override
-    public void done(int count, LCException e) {
+    public void done(int count, MLException e) {
 		if (count > 0){
         	// do something
         }
