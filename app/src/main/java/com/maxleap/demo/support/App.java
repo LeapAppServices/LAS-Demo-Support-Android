@@ -20,10 +20,12 @@ public class App extends Application {
                     "using MaxLeap SDK.");
         }
 
-        MaxLeap.setLogLevel(MaxLeap.LOG_LEVEL_VERBOSE);
-        MaxLeap.initialize(this, APP_ID, API_KEY);
+	    /*
+         * Fill in this section with your MaxLeap credentials
+		 */
+        MaxLeap.setLogLevel(MaxLeap.LOG_LEVEL_ERROR);
+        MaxLeap.initialize(this, APP_ID, API_KEY, MaxLeap.REGION_US);
 
         MLHelpCenter.allowAlertNewMessage(false);
-
     }
 }
