@@ -4,7 +4,7 @@
 
     <application>
 
-        <!-- LeapCloud help center activities start-->
+        <!-- MaxLeap help center activities start-->
         <activity
             android:name="com.maxleap.MLFaqListActivity"
             android:configChanges="orientation|screenSize"
@@ -60,7 +60,7 @@
             android:configChanges="orientation|screenSize"
             android:theme="@style/MLHelpCenter.Theme">
         </activity>
-        <!-- LeapCloud help center activities end-->
+        <!-- MaxLeap help center activities end-->
 
     </application>
 
